@@ -22,21 +22,21 @@ import com.facebook.login.widget.LoginButton;
 public class LoginActivity extends AppCompatActivity {
 
     public static int APP_REQUEST_CODE = 1;
-    LoginButton loginButton;
+    LoginButton fbloginButton;
     CallbackManager callbackManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        //FontHelper.setCustomTypeface(findViewById(R.id.view_root));
+        FontHelper.setCustomTypeface(findViewById(R.id.view_root));
 
-        loginButton = (LoginButton) findViewById(R.id.facebook_login_button);
-        loginButton.setReadPermissions("email");
+        fbloginButton = (LoginButton) findViewById(R.id.facebook_login_button);
+        fbloginButton.setReadPermissions("email");
 
         // Login Button callback registration
         callbackManager = CallbackManager.Factory.create();
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        fbloginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 launchAccountActivity();
