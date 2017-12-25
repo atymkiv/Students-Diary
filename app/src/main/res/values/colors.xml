@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+        <color name="primary">#673AB7</color>
+        <color name="primary_dark">#512DA8</color>
+        <color name="primary_light">#D1C4E9</color>
+        <color name="accent">#448AFF</color>
+        <color name="primary_text">#212121</color>
+        <color name="secondary_text">#757575</color>
+        <color name="icons">#FFFFFF</color>
+        <color name="divider">#BDBDBD</color>
+
+
+    <color name="buttons">#92A6EB</color>
+
+    <color name="accountBackground">#61727f</color>
+    <color name="accountLabel">#7d97ad</color>
+    <color name="accountText">#61727f</color>
+    <color name="accountLogoutLabel">#fc6240</color>
+
+
+    <color name="ak_background">#d5f0ec</color>
+    <color name="ak_text">#61727f</color>
+    <color name="ak_buttonBackground">#09d4b6</color>
+    <color name="ak_buttonPressedBackground">#00c5a5</color>
+    <color name="ak_buttonText">#ffffff</color>
+    <color name="ak_inputBackground">#ffffff</color>
+    <color name="ak_inputText">#7d97ad</color>
+    <color name="ak_statusBar">#00c5a5</color>
+    <color name="ak_icon">#09d4b6</color>
+
+</resources>

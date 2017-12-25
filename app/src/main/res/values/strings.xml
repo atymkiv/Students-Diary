@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Student\'s Diary</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="b_Friday">ПТ</string>
+    <string name="b_Thursday">ЧТ</string>
+    <string name="b_Wednesday">СР</string>
+    <string name="b_Tuesday">ВТ</string>
+    <string name="b_Monday">ПН</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_monday_pair1">Фізичне виховання</string>
+    <string name="tv_Monday_pair2">Історія України</string>
+    <string name="tv_Monday_pair3">Лінійна алгебра і аналітична геометрія</string>
+    <string name="tv_Monday_pair4">Іноземна мова за професійним спрямуванням</string>
+    <string name="tb_schedule">Розклад</string>
+    <string name="tb_notes">Нотатки</string>
+    <string name="tvName">Андрій Тимків</string>
+    <string name="FACEBOOK_APP_ID">146655142650066</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">f64e2195f32d1a9c5dc5a980d13f82a2</string>
+    <string name="ak_login_protocol_scheme">ak146655142650066</string>
+
+    <string name="fb_login_protocol_scheme">fb146655142650066</string>
+
+    
+    <string name="login_email_label">Login with Email</string>
+    <string name="login_phone_label">Login with Phone Number</string>
+    <string name="account">Account</string>
+    <string name="id_label">Account ID</string>
+    <string name="phone_label">Phone Number</string>
+    <string name="email_label">Email</string>
+    <string name="logout_label">Log Out</string>
+    <string name="schedule">Main Window</string>
+    
+</resources>
