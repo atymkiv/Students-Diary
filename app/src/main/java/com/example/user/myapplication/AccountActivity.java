@@ -1,21 +1,29 @@
 package com.example.user.myapplication;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.Profile;
+import com.facebook.accountkit.AccessToken;
 import com.facebook.accountkit.Account;
 import com.facebook.accountkit.AccountKit;
 import com.facebook.accountkit.AccountKitCallback;
 import com.facebook.accountkit.AccountKitError;
 import com.facebook.accountkit.PhoneNumber;
+import com.facebook.login.LoginManager;
 import com.google.i18n.phonenumbers.NumberParseException;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.Phonenumber;
+import com.makeramen.roundedimageview.RoundedTransformationBuilder;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 import java.util.Locale;
 
@@ -25,6 +33,7 @@ public class AccountActivity extends AppCompatActivity {
     TextView infoLabel;
     TextView info;
     Button bforward;
+    ImageView profilePic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +50,41 @@ public class AccountActivity extends AppCompatActivity {
             });
 
 
-       // FontHelper.setCustomTypeface(findViewById(R.id.view_root));
-
+        FontHelper.setCustomTypeface(findViewById(R.id.view_root));
+        profilePic = (ImageView) findViewById(R.id.profile_image);
         id = (TextView) findViewById(R.id.id);
         infoLabel = (TextView) findViewById(R.id.info_label);
         info = (TextView) findViewById(R.id.info);
+
+
+
+        if (com.facebook.AccessToken.getCurrentAccessToken()!= null){
+            // If there is an access token then Login Button was used
+            // Check if the profile has already been fetched
+            Profile profile = Profile.getCurrentProfile();
+            if (profile != null) {
+                displayProfileInfo(profile);
+            }
+            else{
+                // Fetch the profile, which will trigger the onCurrentProfileChanged rece
+                Profile.fetchProfileForCurrentAccessToken();
+            }
+        }
+        else{
+            AccountKit.getCurrentAccount(new AccountKitCallback<Account>() {
+                @Override
+                public void onSuccess(Account account) {
+
+                }
+
+                @Override
+                public void onError(AccountKitError accountKitError) {
+
+                }
+            });
+        }
+
+
         AccountKit.getCurrentAccount(new AccountKitCallback<Account>() {
             @Override
             public void onSuccess(Account account) {
@@ -84,7 +123,36 @@ public class AccountActivity extends AppCompatActivity {
     public void onLogout(View view) {
         //logout of Account Kit
         AccountKit.logOut();
+        //logout of Login Button
+        LoginManager.getInstance().logOut();
+
         launchLoginActivity();
+    }
+
+    private void displayProfileInfo(Profile profile) {
+        // get Profile ID
+        String profileId = profile.getId();
+        id.setText(profileId);
+
+        // display the Profile name
+        String name = profile.getName();
+        info.setText(name);
+        infoLabel.setText(R.string.name_label);
+
+        // display the profile picture
+        Uri profilePicUri = profile.getProfilePictureUri(150, 150);
+        displayProfilePic(profilePicUri);
+    }
+    private void displayProfilePic(Uri uri) {
+        // helper method to load the profile pic in a circular imageview
+        Transformation transformation = new RoundedTransformationBuilder()
+                .cornerRadiusDp(30)
+                .oval(false)
+                .build();
+        Picasso.with(AccountActivity.this)
+                .load(uri)
+                .transform(transformation)
+                .into(profilePic);
     }
 
 
