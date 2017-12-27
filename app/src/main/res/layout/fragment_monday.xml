@@ -15,8 +15,6 @@
         android:layout_height="wrap_content"
 
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/tv_monday_pair1"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
@@ -25,18 +23,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.017"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="64dp" />
 
     <View
 
         android:id="@+id/view4"
         android:layout_width="352dp"
         android:layout_height="1dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/darker_gray"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/b_Monday_pair1" />
 
@@ -44,8 +43,8 @@
         android:id="@+id/b_Monday_pair2"
         android:layout_width="352dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="8dp"
 
         android:text="@string/tv_Monday_pair2"
@@ -59,8 +58,8 @@
         android:id="@+id/view"
         android:layout_width="352dp"
         android:layout_height="1dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,8 +71,8 @@
         android:id="@+id/b_Monday_pair3"
         android:layout_width="352dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="64dp"
 
         android:layout_marginTop="8dp"
         android:text="@string/tv_Monday_pair3"
@@ -87,8 +86,8 @@
         android:id="@+id/view3"
         android:layout_width="352dp"
         android:layout_height="1dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="8dp"
 
         android:background="@android:color/darker_gray"
@@ -101,8 +100,8 @@
         android:id="@+id/b_Monday_pair4"
         android:layout_width="352dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="8dp"
         android:text="@string/tv_Monday_pair4"
 
@@ -116,11 +115,10 @@
         android:id="@+id/view5"
         android:layout_width="352dp"
         android:layout_height="1dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/darker_gray"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/b_Monday_pair4" />
 

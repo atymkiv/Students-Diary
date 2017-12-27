@@ -5,13 +5,13 @@
     android:id="@+id/view_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/accountBackground"
+    android:background="@drawable/background_profile"
     tools:context="com.example.user.myapplication.AccountActivity">
 
     <ImageView
         android:id="@+id/profile_image"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="48dp"
         app:srcCompat="@drawable/icon_profile_empty"
         app:layout_constraintRight_toRightOf="parent"
