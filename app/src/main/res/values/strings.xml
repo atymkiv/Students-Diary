@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Student\'s Diary</string>
-
+    <string name="sub_title">This is an amazing app for students</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -34,6 +34,7 @@
     <string name="phone_label">Phone Number</string>
     <string name="email_label">Email</string>
     <string name="logout_label">Log Out</string>
+    <string name="name_label">Name</string>
     <string name="schedule">Main Window</string>
     
 </resources>
