@@ -70,6 +70,14 @@
             android:screenOrientation="portrait" />
         </activity>
 
+        <provider
+            android:authorities="com.example.user.myapplication.fragments.Notes"
+            android:exported="false"
+            android:name=".fragments.Notes.data.NotesListProvider"></provider>
+        <service
+            android:name=".fragments.Notes.service.NotesListService"
+            android:exported="false"/>
+
 
 
 

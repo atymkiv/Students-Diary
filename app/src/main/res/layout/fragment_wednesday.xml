@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_marginLeft="@dimen/activity_vertical_margin"
     android:layout_centerHorizontal="true"
-    tools:context="com.example.user.myapplication.fragments_schedule.Schedule.FragmentTuesday">
+    >
 
 
     <TextView

@@ -36,5 +36,6 @@
     <string name="logout_label">Log Out</string>
     <string name="name_label">Name</string>
     <string name="schedule">Main Window</string>
-    
+    <string name="etAdd_note_dialog">Додайте нотатку</string>
+
 </resources>

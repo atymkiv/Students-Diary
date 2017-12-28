@@ -7,7 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.user.myapplication.fragments_schedule.Schedule.FragmentNotes;
+import com.example.user.myapplication.fragments.Notes.FragmentNotes;
 
 public class Schedule extends AppCompatActivity {
     FragmentPagerAdapter adapterViewPager;
